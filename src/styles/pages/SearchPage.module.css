@@ -1,0 +1,40 @@
+.searchPage {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.loader {
+    display: block;
+    margin: 50px auto;
+}
+
+.resultCard {
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: red ;
+}
+
+
+.resultCard:hover {
+    transform: translateY(-5px);
+}
+
+
+
+.titleText {
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.cardContent {
+    background-color: #00000000;
+}

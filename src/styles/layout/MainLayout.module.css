@@ -1,0 +1,104 @@
+.container {
+    display: grid;
+    grid-template-areas:    "main main list"
+                            "main main list"
+                            "slider1 slider1 slider1"
+                            "slider2 slider2 slider2"
+                            "footer footer  footer"
+                            "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    height: 300vh;
+  }
+  
+  .mainSlider {
+    grid-area: main; 
+    padding: 20px;
+  }
+  
+  .list {
+    grid-area: list; 
+    padding: 20px;
+    background: linear-gradient(225deg , #333 0%, transparent 20%);
+    overflow: auto;
+  }
+
+  .secondSlider,
+  .thirdSlider { 
+    padding: 20px;
+  }
+  .secondSlider {
+    grid-area: slider1; 
+  }
+.thirdSlider {
+        grid-area: slider2; 
+    }
+  
+  .footer {
+    grid-area: footer; 
+    padding: 10px;
+    text-align: center;
+  }
+  
+
+  @media (max-width: 1024px) {
+    .container {
+      grid-template-areas: 
+        "main main main"
+        "main main main"
+        "slider1 slider1 slider1"
+        "slider2 slider2 slider2"
+        "footer footer  footer"  ;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      height: 200vh;  
+    }
+    .list {
+      display: none;
+    }
+  }
+/* @media (max-width: 1024px) {
+  .container {
+    grid-template-areas: 
+      "main"
+      "list"
+      "slider1"
+      "slider2"
+      "footer";
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .mainSlider,
+  .list,
+  .secondSlider,
+  .thirdSlider {
+    grid-column: auto;
+  }
+} */
+
+/* Responsiveness for mobile screens */
+/* @media (max-width: 768px) {
+  .container {
+    grid-template-areas: 
+      "main"
+      "slider1"
+      "slider2"
+      "footer";
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .list {
+    display: none;
+  }
+  .mainSlider,
+  .list,
+  .secondSlider,
+  .thirdSlider {
+    grid-column: auto;
+    padding: 15px;
+  }
+
+  .footer {
+    padding: 5px;
+  }
+} */
